@@ -19,10 +19,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
     - name: Restore dependencies
       run: dotnet restore ClassLibraryProjects/ClassLibraryProjects.sln
     - name: Build
-      run: dotnet build ClassLibraryProjects/ShowCase/ShowCase.sln --no-restore
+      run: dotnet build ClassLibraryProjects/ClassLibraryProjects.sln --no-restore
     - name: Test
       run: dotnet test ClassLibraryProjects/StringLibraryTest/StringLibraryTest.csproj --no-build --verbosity normal
